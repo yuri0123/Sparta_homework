@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <title>Notepad</title>
+    <title>Hello, world!</title>
 	
 	<!-- 합쳐지고 최소화된 최신 CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -75,7 +75,8 @@
 	        if ($("div.card-columns").css("display") == "none") {
     	      alert("삭제할 글이 없습니다");
 	        } else {
-	          $("div.card-columns").hide();
+	        	$("div").remove(".card");
+	          // $("div.card-columns").hide();
         }
       }
 
@@ -115,6 +116,7 @@
 			<hr class="my-4">
 			<p class="lead">
 				<button onclick="HideAndShow()" class="btn btn-primary btn-lg"> 포스팅박스 열기 </button>
+				<button onclick="deleteCard()" class="btn btn-danger btn-lg">전체삭제</button>
 			</p>
 		</div>
 
@@ -129,7 +131,6 @@
                     <textarea class="form-control" id="Commentbox" aria-describedby="emailHelp"></textarea>
                 </div>
                 <button onclick="savePost()" type="submit" class="btn btn-primary">기사저장</button>
-                <button onclick="deleteCard()" type="submit" class="btn btn-warning">전체삭제</button>
             </form>
 		</div>
 		
